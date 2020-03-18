@@ -1,0 +1,24 @@
+@import 'config/medias.scss';
+@import 'vendors/reset.scss';
+@import 'blocs/newParty.scss';
+
+.main {
+	margin-left: 20px;
+	.text {
+		h1 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 30px;
+		} h2 {	
+			font-size: 25px;
+		}
+	}
+	form {
+		margin-top: 20px;
+	} #creation {
+		margin-top: 20px;
+	} label {
+		display: block;
+	}
+}
+

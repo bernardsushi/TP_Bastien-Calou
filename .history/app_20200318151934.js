@@ -34,5 +34,4 @@ app.get('/party/:id', function(req, res) {
 });
 
 app.listen(port, () => console.log(`Front app listening on port ${port}!`));
-
 app.set('view engine', 'pug');

@@ -1,0 +1,20 @@
+include ../partials/header.pug
+<div class="main">
+  <div class="text">
+    h1 Qui prend quoi ?
+    h2 Créer un événement
+  </div>
+  form(method="post" action="/party")
+    div.newParty__fields
+      label(for="name") Nom de l'événement
+      input(name="name" id="name" required minlength="3" placeholder="Nouvel an")
+
+      label(for="author") Auteur
+      input(name="author" id="author" required minlength="0" placeholder="Ton Prénom")
+
+      label(for="date") Date
+      input(name="date" type="date" value="2020-01-01"  min="2020-01-01" max="2025-12-31" id="date" placeholder="date")
+
+    button(id="creation" type="submit") Créer
+
+    

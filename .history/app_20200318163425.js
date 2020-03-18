@@ -5,8 +5,6 @@ const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const axios = require('axios');
 
-app.use(express.static('public'));
-
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res) {
@@ -34,5 +32,6 @@ app.get('/party/:id', function(req, res) {
 });
 
 app.listen(port, () => console.log(`Front app listening on port ${port}!`));
-
 app.set('view engine', 'pug');
+
+app.use(express.static('public'));
