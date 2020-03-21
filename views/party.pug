@@ -2,4 +2,6 @@ include ../partials/header.pug
 h2= party.name
 h3 Créé par #{party.author}
 label(for="url") Partagez l'événement
-input(id="url" value=`${url}` data-clipboard=`${url}`)
+input(id="url" value=`${url}` data-clipboard=`${url}` data-share-url=`${url}` data-share-title=`${name}` data-share-text=`${author}`)
+script.
+  party = !{JSON.stringify(party)}

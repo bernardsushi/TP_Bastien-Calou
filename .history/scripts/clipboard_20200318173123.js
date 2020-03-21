@@ -10,8 +10,7 @@ if (navigator.clipboard) {
       function copyToClipboard($clipboardEl, $button) {
         console.log('Click !');
         navigator.clipboard.writeText($clipboardEl.getAttribute('data-clipboard')).then(() => {
-          $button.innerHTML = 'Copié !';
-          setTimeout(() => ($button.innerHTML = 'Copier'), 2000);
+          console.log('Copié !');
         })
         .catch((err) => console.warn(err));
       }

@@ -9,11 +9,12 @@ if (navigator.clipboard) {
       copyToClipboard.bind(this, $clipboardEl, $button));
       function copyToClipboard($clipboardEl, $button) {
         console.log('Click !');
-        navigator.clipboard.writeText($clipboardEl.getAttribute('data-clipboard')).then(() => {
-          $button.innerHTML = 'Copié !';
-          setTimeout(() => ($button.innerHTML = 'Copier'), 2000);
-        })
-        .catch((err) => console.warn(err));
+        navigator.clipboard
+          .writeText($clipboardEl.getAttribute('data-clipboard'))
+          .then(() => {
+            console.log('Copié !');
+          })
+          .catch((err) => console.warn(err));
       }
   });
 } else {
