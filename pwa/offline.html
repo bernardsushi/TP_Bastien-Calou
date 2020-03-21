@@ -11,9 +11,7 @@
     <h2>Vous êtes hors ligne</h2>
   </body>
   <script>
-    caches.open('parties').then((cache) =>
-  cache.keys().then((keys) =>
-    keys.forEach((key) => {
+  caches.open('parties').then((cache) => cache.keys().then((keys) => keys.forEach((key) => {
       console.log(key);
     })
   )
